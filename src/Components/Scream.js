@@ -19,7 +19,8 @@ const styles = {
         minWidth: 200
     },
     content: {
-        padding: 25
+        padding: 25,
+        object: 'cover'
     }
 }
 
