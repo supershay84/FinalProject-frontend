@@ -9,7 +9,6 @@ import Button from '@material-ui/core/Button';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import { relativeTime } from 'dayjs';
 
 const styles = {
     form: {
@@ -38,7 +37,7 @@ const styles = {
     }
 };
 
-export class login extends Component {
+class login extends Component {
     constructor(){
         super();
         this.state= {
@@ -60,6 +59,7 @@ export class login extends Component {
         axios.post('/login', userData)
             .then((res) => {
                 console.log(res.data);
+                localStorage.setItem('FBIdToken', `Bearer ${res.data.token}`);
                 this.setState({
                     loading: false
                 });
