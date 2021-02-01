@@ -9,6 +9,7 @@ import { Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
+import defaultImage from '../images/images-1.jpg';
 
 const styles = {
     card: {
@@ -32,8 +33,9 @@ class Scream extends Component {
         return (
            <Card className={classes.card}>
                <CardMedia
+               height="200"
                className={classes.image} 
-               image={userImage}
+               image={defaultImage}
                title="Profile image"/>
                <CardContent className={classes.content} >
                    <Typography 
