@@ -12,13 +12,12 @@ import LocationOn from '@material-ui/icons/LocationOn';
 import LinkIcon from '@material-ui/icons/Link';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import dayjs from 'dayjs';
-import IconButton from '@material-ui/core/IconButton';
-import EditIcon from '@material-ui/icons/Edit';
-import Tooltip from '@material-ui/core/Tooltip';
 import { logoutUser, uploadImage } from '../redux/actions/userActions';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import EditProfile from './EditProfile';
-
+import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
+import MyButton from '../utilities/MyButton';
+import EditIcon from '@material-ui/icons/Edit';
 
 const styles = (theme) => ({
     paper: {
@@ -100,11 +99,16 @@ class Profile extends Component {
                               id="imageInput"
                               hidden="hidden" 
                               onChange={this.handleImageChange}/>
-                        <Tooltip title="Edit Pic" placement="bottom">
+                        {/* <Tooltip title="Edit Pic" placement="bottom">
                         <IconButton onClick={this.handleEditPicture}    className="button">
-                            <EditIcon color="primary"/>
+                            <AddAPhotoIcon color="primary"/>
                         </IconButton>
-                        </Tooltip>
+                        </Tooltip> */}
+                        <MyButton tip="Edit Profile Pic"
+                                  onClick={this.handleEditPicture}
+                                  btnClassName="button">
+                            <AddAPhotoIcon color="primary"/>
+                        </MyButton>
                   </div>
                   {/* HORIZONTAL BORDER */}
                   <hr/>
@@ -138,11 +142,10 @@ class Profile extends Component {
                     <CalendarTodayIcon color="primary"/>{' '}
                     <span>Joined {dayjs(createdAt).format('MM YYYY')}</span>
                   </div>
-                  <Tooltip title="Logout" placement="bottom">
-                      <IconButton onClick={this.handleLogout}>
-                          <ExitToAppIcon/>
-                      </IconButton>
-                  </Tooltip>
+                  <MyButton tip="Logout"
+                            onClick={this.handleLogout}>
+                            <ExitToAppIcon color="primary"/>
+                        </MyButton>
                   <EditProfile/>
               </div> 
             </Paper>
@@ -153,7 +156,7 @@ class Profile extends Component {
                 </Typography>
                 <div className={classes.buttons}>
                     <Button variant="contained" 
-                            color="primary" 
+                            color="primary"
                             component={Link} 
                             to="/login"> LOGIN
                     </Button>

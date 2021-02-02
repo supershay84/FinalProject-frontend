@@ -14,6 +14,7 @@ import { signupUser } from '../redux/actions/userActions';
 
 const styles = {
     form: {
+        backgroundColor: 'white',
         textAlign: 'center'
     },
     image: {

@@ -13,19 +13,23 @@ import { loginUser } from '../redux/actions/userActions';
 
 const styles = {
     form: {
-        textAlign: 'center'
+        backgroundColor: 'white',
+        textAlign: 'center',
+        height: '600px'
     },
     image: {
         margin: '20px auto 20px auto'
     },
     pageTitle: {
-        margin: '20px auto 20px auto'
+        margin: '20px auto 20px auto',
+        
     },
     textField: {
-        margin: '20px auto 20px auto'
+        margin: '20px auto 20px auto',
+        
     },
     button: {
-        marginTop: 20,
+        margin: 20,
         position: 'relative'
     
     },

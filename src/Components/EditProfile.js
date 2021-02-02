@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { connect } from 'react-redux';
 import { editUserProfile } from '../redux/actions/userActions';
-import Tooltip from '@material-ui/core/Tooltip';
-import IconButton from '@material-ui/core/IconButton';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
@@ -12,6 +10,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import EditIcon from '@material-ui/icons/Edit';
+import MyButton from '../utilities/MyButton';
 
 
 const styles = (theme) => ({
@@ -78,11 +77,11 @@ class EditProfile extends Component {
         const { classes } = this.props;
         return (
          <>
-            <Tooltip title="Edit Profile" placement="bottom">
-                <IconButton onClick={this.handleOpen} className={classes.button}>
-                    <EditIcon/>
-                </IconButton>
-            </Tooltip>
+            <MyButton tip="Edit Profile"
+                      onClick={this.handleOpen}
+                      btnClassName={classes.button}>
+                <EditIcon color="primary"/>
+             </MyButton>
             <Dialog open={this.state.open}
                     onClose={this.handleClose}
                     fullWidth
