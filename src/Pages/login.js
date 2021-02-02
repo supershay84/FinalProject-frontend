@@ -66,6 +66,7 @@ class login extends Component {
             [e.target.name]: e.target.value
         });
     };
+    
     render() {
         const { classes, UI: loading } = this.props;
         const { errors } = this.state;

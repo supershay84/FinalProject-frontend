@@ -1,10 +1,10 @@
 export default {
     palette: {
       primary: {
-        main: '#212121'
+        main: '#311b92'
       },
       secondary: {
-        main: '#311b92'
+        main: '#311b93'
       }
     },
     typography: {

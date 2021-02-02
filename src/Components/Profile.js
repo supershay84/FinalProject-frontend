@@ -17,6 +17,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import Tooltip from '@material-ui/core/Tooltip';
 import { logoutUser, uploadImage } from '../redux/actions/userActions';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import EditProfile from './EditProfile';
 
 
 const styles = (theme) => ({
@@ -142,6 +143,7 @@ class Profile extends Component {
                           <ExitToAppIcon/>
                       </IconButton>
                   </Tooltip>
+                  <EditProfile/>
               </div> 
             </Paper>
         ): (
