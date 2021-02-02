@@ -15,7 +15,9 @@ import EditIcon from '@material-ui/icons/Edit';
 
 
 const styles = (theme) => ({
-   
+   button: {
+       float: 'right'
+   }
 });
 
 class EditProfile extends Component {
@@ -24,6 +26,14 @@ class EditProfile extends Component {
         website: '',
         location: '',
         open: false
+    };
+
+    mapUserDetailsToState = (credentials) => {
+        this.setState({
+            bio: credentials.bio ? credentials.bio : '',
+            website: credentials.website ? credentials.website : '',
+            location: credentials.location ? credentials.location : ''
+        }); 
     };
 
     handleOpen = () => {

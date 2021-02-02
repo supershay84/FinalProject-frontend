@@ -47,11 +47,11 @@ class login extends Component {
             errors: {}
         };
     }
-    componentWillReceiveProps(nextProps){
-        if(nextProps.UI.errors){
-            this.setState({ errors: nextProps.UI.errors });
-        }
-    }
+    // componentWillReceiveProps(nextProps){
+    //     if(nextProps.UI.errors){
+    //         this.setState({ errors: nextProps.UI.errors });
+    //     }
+    // };
     handleSubmit = (e) => {
         e.preventDefault();
         const userData = {
@@ -66,7 +66,7 @@ class login extends Component {
             [e.target.name]: e.target.value
         });
     };
-    
+
     render() {
         const { classes, UI: loading } = this.props;
         const { errors } = this.state;
