@@ -14,8 +14,11 @@ import store from './redux/store';
 import { SET_AUTHENTICATED } from './redux/types';
 import { logoutUser, getUserData } from './redux/actions/userActions';
 import axios from 'axios';
+import user from './Pages/user';
 
 const theme = createMuiTheme(themeFile);
+
+axios.defaults.baseUrl = "https://us-east4-final-project-social-med-2021.cloudfunctions.net/api";
 
 const token = localStorage.FBIdToken;
 if(token){
@@ -43,13 +46,14 @@ function App() {
         <Switch>
           <Route exact path="/" 
                  component={home}
-                 />
+          />
           <AuthRoute exact path="/login" 
                      component={login} 
-                    />
+          />
           <AuthRoute exact path="/signup" 
                      component={signup} 
-                    />
+          />
+          <Route exact path = '/users/:handle' component={user}/>
         </Switch>
        </div>
       </Router>
