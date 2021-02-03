@@ -5,10 +5,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import MyButton from '../utilities/MyButton';
+import MyButton from '../../utilities/MyButton';
 import HomeIcon from '@material-ui/icons/Home';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import PostScream from './PostScream';
+import PostScream from '../scream/PostScream';
 
 
 

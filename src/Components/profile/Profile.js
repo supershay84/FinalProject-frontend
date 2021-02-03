@@ -4,7 +4,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import { connect } from 'react-redux';
-import themes from '../utilities/themes';
+import themes from '../../utilities/themes';
 import { Link } from 'react-router-dom';
 import MuiLink from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
@@ -12,11 +12,11 @@ import LocationOn from '@material-ui/icons/LocationOn';
 import LinkIcon from '@material-ui/icons/Link';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import dayjs from 'dayjs';
-import { logoutUser, uploadImage } from '../redux/actions/userActions';
+import { logoutUser, uploadImage } from '../../redux/actions/userActions';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import EditProfile from './EditProfile';
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
-import MyButton from '../utilities/MyButton';
+import MyButton from '../../utilities/MyButton';
 
 
 const styles = (theme) => ({
