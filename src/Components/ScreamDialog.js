@@ -38,7 +38,7 @@ const styles = (theme) => ({
       position: 'absolute',
       left: '90%'
     },
-    spinnerDiv: {
+    circleOfDeath: {
       textAlign: 'center',
       marginTop: 50,
       marginBottom: 50
@@ -66,7 +66,9 @@ class ScreamDialog extends Component{
               } = this.props;
 
         const dialogMarkup = loading ? (
-            <CircularProgress size={200}/>
+            <div className={classes.circleOfDeath}>
+            <CircularProgress size={100}/>
+            </div>
         ) : (
             <Grid container spacing={16}>
                 <Grid item sm={6}>
