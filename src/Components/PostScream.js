@@ -43,7 +43,6 @@ class PostScream extends Component{
         }
         if(!nextProps.UI.errors && !nextProps.UI.loading){
             this.setState({ body: '', open: false, errors: {} });
-            // this.handleClose();
         }
     };
 
@@ -52,7 +51,7 @@ class PostScream extends Component{
     };
 
     handleClose = () => {
-        clearErrors();
+        this.props.clearErrors();
         this.setState({ open: false, errors: {} })
     };
 
@@ -135,4 +134,4 @@ const mapStateToProps = (state) => ({
     UI: state.UI
 })
 
-export default connect(mapStateToProps, { postScream })(withStyles(styles)(PostScream));
+export default connect(mapStateToProps, { postScream, clearErrors })(withStyles(styles)(PostScream));

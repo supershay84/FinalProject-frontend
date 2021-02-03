@@ -18,6 +18,7 @@ import ChatIcon from '@material-ui/icons/Chat';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import DeleteScream from './DeleteScream';
+import ScreamDialog from './ScreamDialog';
 
 
 
@@ -137,6 +138,11 @@ class Scream extends Component {
                     </MyButton>
                     
                     <span>{commentCount} comments</span>
+
+                    <ScreamDialog screamId={screamId} 
+                                  userHandle={userHandle}
+                    />
+                    
                </CardContent>
            </Card>
         )
@@ -149,7 +155,7 @@ Scream.propTypes = {
     user: PropTypes.object.isRequired,
     scream: PropTypes.object.isRequired,
     classes: PropTypes.object.isRequired,
-    openDialog: PropTypes.bool
+    // openDialog: PropTypes.bool
 };
 
 const mapStateToProps = (state) => ({
