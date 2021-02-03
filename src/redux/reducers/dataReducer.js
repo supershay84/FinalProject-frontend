@@ -29,6 +29,11 @@ export default function( state = initialState, action ){
             // FIND SCREAM WHICH WE GOT BACK FROM PAYLOAD
             let index = state.screams.findIndex((scream) => scream.screamId === action.payload.screamId);
             state.screams[index] = action.payload;
+            // TO UPDATE LIKE COUNT ON INDIVIDUAL SCREAM
+            // CHECK TO SEE IF SCREAM IDS MATCH
+            if (state.scream.screamID === action.payload.screamId){
+                state.scream = action.payload;
+            }
             return {
                 ...state
             };
