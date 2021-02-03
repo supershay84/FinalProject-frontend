@@ -22,8 +22,8 @@ const styles = (theme) => ({
         margin: 4
     },
     profileImage: {
-      maxWidth: 200,
-      height: 200,
+      maxWidth: 150,
+      height: 150,
       borderRadius: '50%',
       objectFit: 'cover'
     },
@@ -72,13 +72,13 @@ class ScreamDialog extends Component{
             </div>
         ) : (
             <Grid container spacing={16}>
-                <Grid item sm={6}>
+                <Grid item sm={5}>
                     <img src={userImage} 
                          alt="Profile" 
                          className={classes.profileImage}/>
                 </Grid>
                     
-                <Grid item sm={6}>
+                <Grid item sm={7}>
                     <Typography component={Link}
                                 color="primary"
                                 variant="h5"
