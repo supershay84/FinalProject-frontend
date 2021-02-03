@@ -17,7 +17,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import EditProfile from './EditProfile';
 import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 import MyButton from '../utilities/MyButton';
-import EditIcon from '@material-ui/icons/Edit';
+
 
 const styles = (theme) => ({
     paper: {
