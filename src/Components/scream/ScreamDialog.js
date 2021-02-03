@@ -15,11 +15,17 @@ import { getScream } from '../../redux/actions/dataActions';
 import UnfoldMore from '@material-ui/icons/UnfoldMore';
 import ChatIcon from '@material-ui/icons/Chat';
 import LikeButton from './LikeButton';
+import Comments from './Comments';
 
 const styles = (theme) => ({
     seperator: {
         border: 'none',
         margin: 4
+    },
+    visibileSeperator: {
+        width: '100%',
+        borderBottom: '1px solid rgba(0,0,0,0.1)',
+        marginBottom: 20
     },
     profileImage: {
       maxWidth: 150,
@@ -108,8 +114,11 @@ class ScreamDialog extends Component{
                     
                     <span>{commentCount} comments</span>
                 </Grid>
+
+                <hr className={classes.visibleSeperator}/>
+                <Comments comments={comments}/>
             </Grid>
-        )
+        );
               
         return (
             <>
